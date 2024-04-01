@@ -33,4 +33,44 @@ Java, a high-level programming language, has a rich history dating back to the m
 ## 5. Future of Java
 
 Java continues to evolve with updates, community contributions, and emerging trends in software development. With the introduction of Project Loom, Project Panama, and other initiatives, the Java ecosystem remains vibrant and relevant in modern computing.
+# Java Command-line Arguments
+
+When running a Java application from the command line, you can provide arguments to customize its behavior. These arguments are passed to the `main` method of the Java program as an array of strings. Here's how it works:
+
+## Basic Syntax
+
+The basic syntax for running a Java application with command-line arguments is:
+
+
+Where:
+- `java` is the command to run Java programs.
+- `YourClassName` is the name of the class containing the `main` method.
+- `arg1`, `arg2`, etc., are the command-line arguments passed to the program.
+
+## Accessing Command-line Arguments
+
+Within your Java program, you can access these command-line arguments via the `args` parameter of the `main` method:
+
+```java
+public class YourClassName {
+    public static void main(String[] args) {
+        // args is an array containing command-line arguments
+        for (String arg : args) {
+            System.out.println("Argument: " + arg);
+        }
+    }
+}
+Example Usage : java MyProgram arg1 arg2 arg3
+public class MyProgram {
+    public static void main(String[] args) {
+        System.out.println("Number of arguments: " + args.length);
+        for (int i = 0; i < args.length; i++) {
+            System.out.println("Argument " + i + ": " + args[i]);
+        }
+    }
+}
+Number of arguments: 3
+Argument 0: arg1
+Argument 1: arg2
+Argument 2: arg3
 
