@@ -74,3 +74,38 @@ Argument 0: arg1
 Argument 1: arg2
 Argument 2: arg3
 
+# Special Java Command-line Arguments
+
+In addition to regular command-line arguments, Java provides special command-line options for specific purposes:
+
+## 1. `-cp` or `-classpath`
+
+The `-cp` or `-classpath` option is used to specify the classpath, which tells the Java Virtual Machine (JVM) where to look for classes and packages. You can use this option to include directories and JAR files containing required classes.
+
+Example:
+java -cp /path/to/classes:/path/to/library.jar YourClassName
+
+
+## 2. `-X` Options
+
+The `-X` options are non-standard options provided by the JVM for advanced configuration and tuning, such as performance optimization, setting memory limits, and controlling garbage collection behavior. These options vary depending on the JVM implementation and version.
+
+Some commonly used `-X` options include:
+- `-Xmx<size>`: Set the maximum heap size.
+- `-Xms<size>`: Set the initial heap size.
+- `-Xss<size>`: Set the thread stack size.
+
+Example:
+java -Xmx512m -Xms256m YourClassName
+
+
+## 3. `-D<name>=<value>`
+
+The `-D<name>=<value>` option is used to set system properties within the Java program. System properties provide a convenient way to pass configuration parameters to Java applications.
+
+Example:
+java -Djava.library.path=/path/to/libs YourClassName
+
+
+These special command-line arguments provide additional flexibility and control over the Java runtime environment, allowing developers to customize various aspects of their Java applications.
+
